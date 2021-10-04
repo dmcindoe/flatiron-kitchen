@@ -8,6 +8,14 @@
 </head>
 <body>
 
+div class="header" style="background-color: #5ed6c0">
+  <h1>Flatiron Kitchen</h1>
+  <div class="nav">
+    <%= link_to "Ingredients", ingredients_path %>
+    <%= link_to "Recipes", recipes_path %>
+  </div>
+</div>
+
 <%= yield %>
 
 </body>

@@ -1,0 +1,17 @@
+<% if ingredient.errors.any? %>
+  <div class="errors">
+    <h3 style="color: red">Could not save ingredient due to:</h3>
+    <ul>
+      <% ingredient.errors.full_messages.each do |message| %>
+        <li style="color: red"><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for ingredient do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <br>
+  <%= form.submit %>
+<% end %> 
